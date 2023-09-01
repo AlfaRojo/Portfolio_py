@@ -7,6 +7,8 @@ def crete_app():
     app = Flask(__name__)
     app.config.from_mapping(
         SENDGRID_KEY = os.environ.get('SENDGRID_KEY'),
+        LOG_LEVEL='DEBUG',
+        HOST='0.0.0.0',
     )
 
     app.register_blueprint(portfolio.bp)
