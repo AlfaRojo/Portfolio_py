@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<title>
+    {% block title %} - Portafolio {% endblock %}
+</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename="style.css" ) }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&family=Rubik:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&family=Rubik:ital,wght@0,700;1,400&family=Rufina:wght@400;700&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<head>
+    <link rel="icon" type="image/x-icon" href="../static/favicon.ico">
+</head>
+
+<body>
+    <header class="header">
+        <input class="menu-btn" type="checkbox" id="menu-btn" />
+        <input class="menu-btn" type="checkbox" id="menu-btn" />
+        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+        <ul class="menu">
+          <li><a href="{{ url_for('portfolio.index') }}">Home</a></li>
+          <li><a href="#contacto">Contact</a></li>
+          <li><a href="{{ url_for('portfolio.main') }}">Achievements</a></li>
+        </ul>
+      </header>
+    {% block content %}
+    {% endblock %}
+    <div class="footer">
+        <div class="center full-width">
+            <div class="row">
+                <h3>Contact me :D</h3>
+            </div>
+        </div>
+        <div class="center full-width">
+            <div class="row">
+                <p>Or you can follow me on my social networks.</p>
+            </div>
+        </div>
+        <div class="center full-width social-links">
+            <div class="row">
+                <a href="https://www.linkedin.com/in/estudiante-ram%C3%ADrez-165a65210/" target="_blank"><img width=30 src="{{ url_for('static', filename="linkedin.png" ) }}" alt="Linkedin"></a>
+                <a href="https://github.com/AlfaRojo" target="_blank"><img width=30 src="{{ url_for('static', filename="github.png" ) }}" alt="Github"></a>
+            </div>
+        </div>
+        <div class="made-with">
+            <div class="row">
+                <p>Made with &#10084; by Kevin Ramírez</p>
+            </div>
+        </div>
+    </div>
+
+</body>

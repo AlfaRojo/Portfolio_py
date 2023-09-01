@@ -1,0 +1,36 @@
+{% extends 'base.html'%}
+
+{% block title %}
+Welcome!
+{% endblock%}
+
+{% block content %}
+<div class="hero">
+    <div class="hero-Content">
+        <div class="left">
+            <h1>
+                <span class="spaner" style='--content: "I am Kevin Ramirez,"; --start-color: #7928CA; --end-color: #FF0080; --delay: 0s'>
+                    I am Kevin Ramirez,
+                </span>
+            </h1>
+            <h1>
+                <span class="spaner" style='--content: "a full-stack developer."; --start-color: #FF4D4D; --end-color: #F9CB28; --delay: 3s'>
+                    a full-stack developer.
+                </span>
+            </h1>
+            <p>Or rather, problem solver (it's more fun than programming). I'm learning about Python (Flask), Javascript (Angular/Ionic) and Solidity.</p>
+            <a href="#contacto" class="btn">Contact me</a>
+        </div>
+        
+        <div class="right">
+            <img src="{{ url_for('static', filename="hero.png" ) }}" alt="Hero" class="img-max" />
+        </div>
+    </div>
+</div>
+{% include 'portfolio/section-first.html' %}
+
+{% include 'portfolio/section-second.html' %}
+
+{% include 'portfolio/section-third.html' %}
+
+{% endblock %}
